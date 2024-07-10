@@ -8,9 +8,9 @@ const userSchema = new Schema(
             required: [true, "User email required"],
             unique: true,
             validate: {
-                validator: function (v) {
+                validator: function (value) {
                     return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
-                        v
+                        value
                     );
                 },
                 message: (input) => `${input.value} is not a valid email!`,
