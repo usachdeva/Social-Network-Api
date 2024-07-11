@@ -8,6 +8,7 @@ module.exports = {
             const users = await User.find().populate("thoughts", "friends");
             res.json(users);
         } catch (err) {
+            console.error(err);
             res.status(500).json(err);
         }
     },
@@ -25,6 +26,7 @@ module.exports = {
 
             res.json(user);
         } catch (err) {
+            console.error(err);
             res.status(500).json(err);
         }
     },
@@ -36,7 +38,10 @@ module.exports = {
     //   }
     async createUser(req, res) {
         try {
+            const user = await User.create(req.body);
+            res.json(user);
         } catch (err) {
+            console.error(err);
             res.status(500).json(err);
         }
     },
@@ -55,6 +60,7 @@ module.exports = {
             await Thought.deleteMany({ _id: { $in: user.thoughts } });
             res.json({ message: "User and thoughts deleted!" });
         } catch (err) {
+            console.error(err);
             res.status(500).json(err);
         }
     },
@@ -74,6 +80,7 @@ module.exports = {
 
             res.json(user);
         } catch (err) {
+            console.error(err);
             res.status(500).json(err);
         }
     },
