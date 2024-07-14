@@ -33,5 +33,7 @@ git-repo: https://github.com/usachdeva/Social-Network-Api
 ## Walkthrough Videos
 
 ```
+Users: https://www.youtube.com/watch?v=TbSc8hIKjE4
+Thoughts: https://www.youtube.com/watch?v=OPlNpzRofq8
 
 ```

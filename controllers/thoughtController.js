@@ -86,6 +86,10 @@ module.exports = {
     },
 
     // add a reaction
+    // {
+    //     "reactionBody":"great",
+    //     "username": "udit25",
+    // }
     async addReaction(req, res) {
         console.log(`adding a reaction`);
 
@@ -102,7 +106,7 @@ module.exports = {
 
             res.json(thought);
         } catch (err) {
-            console.err(err);
+            console.error(err);
             res.status(500).json(err);
         }
     },
